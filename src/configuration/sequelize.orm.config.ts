@@ -1,8 +1,11 @@
 import { SequelizeModuleOptions } from "@nestjs/sequelize";
+import { Account } from "../model/account.entity";
+import { Token } from "../model/token.entity";
+import { UserView } from "../model/user.view.entity";
 
 function sequelizeOrmConfig(): SequelizeModuleOptions {
   const commonConfig = {
-    MODELS: []
+    MODELS: [Account, Token, UserView]
   }
 
   const ormConfig: SequelizeModuleOptions = {
